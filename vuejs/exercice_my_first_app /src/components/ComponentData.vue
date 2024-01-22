@@ -26,7 +26,7 @@ function remove() {
 -->
 
 <!--////////////////////////////////////////
-   POSITION -->
+   OPTION -->
 <script>
 export default {
   data() {

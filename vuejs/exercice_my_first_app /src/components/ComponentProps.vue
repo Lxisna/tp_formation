@@ -12,7 +12,7 @@ console.log(propos.msg);
 </template> -->
 
 <!--////////////////////////////////////////
-   POSITION -->
+   OPTION -->
 <script>
 export default {
   props: {

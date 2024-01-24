@@ -1,5 +1,5 @@
 <script>
-import debounce from "debounce";
+import debounce from "lodash";
 
 export default {
   data() {
@@ -8,15 +8,15 @@ export default {
       gender: "",
       formData: {
         fullname: "",
-        sex: "",
+        gender: "",
         count: 0,
       },
     };
   },
   methods: {
-    Submit: Debounce(function () {
+    Submit: debounce(function () {
       this.formData.fullname = this.fullname;
-      this.formData.sex = this.sex;
+      this.formData.gender = this.gender;
       this.formData.count++;
     }, 3000),
   },

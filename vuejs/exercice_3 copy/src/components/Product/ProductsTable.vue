@@ -21,22 +21,15 @@ export default {
     },
   },
   computed: {
-    /* 
-            Utlisation d'une Computed  avec les données issus du template
-            !!! SYNTAXE PARTICULIERE
-            Double Fonction fléché
-            La première fonction permet "d'injecter" 
-            les arguments de la fonction à la seconde 
-        */
     vtaCalculation: () => (price, vta) => {
+      if (typeof price != "number") {
+        throw new Error("Parameter is not a number");
+        return "error";
+      }
+
       let tax = (price / 100) * vta;
       return price + tax;
     },
-
-    /* 
-            Utlisation Computed  avec les données local du composant
-            injecté via les props     
-        */
     vtaCalculationLocal() {
       let tax = (this.price / 100) * this.vta;
       return this.price + tax;
